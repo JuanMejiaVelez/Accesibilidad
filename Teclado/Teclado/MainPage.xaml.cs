@@ -19,6 +19,9 @@ namespace Teclado
         {
             StepOneButton.IsEnabled = false;
             // Process something
+
+            ContainerTwo.Visibility = Visibility.Visible;
+            ContainerOne.Visibility = Visibility.Collapsed;
         }
     }
 }

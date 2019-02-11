@@ -20,6 +20,11 @@
     </winui:NavigationView.MenuItems>
     <winui:NavigationView.Content>
       <RelativePanel Margin="24">
+        <RelativePanel.Transitions>
+          <TransitionCollection>
+            <EntranceThemeTransition/>
+          </TransitionCollection>
+        </RelativePanel.Transitions>
         <TextBlock 
           x:Name="AppTitle"
           Text="Aplicacion prueba para navegacion por teclado"
@@ -41,69 +46,87 @@
           <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
           </Grid.RowDefinitions>
-          
-        <TextBlock 
-          x:Name="FirstNameTextBlock"
-          Text="Nombre"
-          Style="{StaticResource SubtitleTextBlockStyle}"/>
 
-        <TextBox 
-          x:Name="FirstNameTextBox"
-          Margin="6,6,12,6"
-          Grid.Row="1"/>
+          <TextBlock 
+            x:Name="FirstNameTextBlock"
+            Text="Nombre"
+            Style="{StaticResource SubtitleTextBlockStyle}"/>
 
-        <TextBlock 
-          x:Name="LastNameTextBlock"
-          Text="Apellido"
-          Style="{StaticResource SubtitleTextBlockStyle}"
-          Grid.Column="1"/>
+          <TextBox 
+            x:Name="FirstNameTextBox"
+            Margin="6,6,12,6"
+            Grid.Row="1"/>
 
-        <TextBox 
-          x:Name="LastNameTextBox"
-          Margin="6,6,12,6"
-          Grid.Column="1"
-          Grid.Row="1"/>
+          <TextBlock 
+            x:Name="LastNameTextBlock"
+            Text="Apellido"
+            Style="{StaticResource SubtitleTextBlockStyle}"
+            Grid.Column="1"/>
+
+          <TextBox 
+            x:Name="LastNameTextBox"
+            Margin="6,6,12,6"
+            Grid.Column="1"
+            Grid.Row="1"/>
+
+          <Button 
+            x:Name="StepOneButton"
+            Content="Siguiente"
+            Margin="0,12"
+            Click="StepOneButton_Click"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"/>
+
         </Grid>
 
-        <Button 
-          x:Name="StepOneButton"
-          Content="Siguiente"
-          Margin="0,12"
-          Click="StepOneButton_Click"
-          RelativePanel.Below="ContainerOne" />
+        <Grid 
+          x:Name="ContainerTwo"
+          Visibility="Collapsed"
+          RelativePanel.Below="ContainerOne">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+          </Grid.RowDefinitions>
 
-        <TextBlock 
-          x:Name="EmailTextBlock"
-          Text="Correo Electrónico"
-          Margin="0,12"
-          Style="{StaticResource SubtitleTextBlockStyle}"
-          RelativePanel.Below="StepOneButton"/>
+          <TextBlock 
+            x:Name="EmailTextBlock"
+            Text="Correo Electrónico"
+            Margin="0,12"
+            Style="{StaticResource SubtitleTextBlockStyle}" />
 
-        <TextBox 
-          x:Name="EmailTextBox"
-          Margin="6,12"
-          Width="400"
-          RelativePanel.Below="EmailTextBlock"/>
+          <TextBox 
+            x:Name="EmailTextBox"
+            Margin="6,12"
+            Width="400"
+            Grid.Row="1"/>
 
-        <TextBlock 
-          x:Name="PasswordTextBlock"
-          Text="Contraseña"
-          Style="{StaticResource SubtitleTextBlockStyle}"
-          RelativePanel.Below="EmailTextBox"/>
+          <TextBlock 
+            x:Name="PasswordTextBlock"
+            Text="Contraseña"
+            Style="{StaticResource SubtitleTextBlockStyle}"
+            Grid.Column="1"/>
 
-        <PasswordBox 
-          x:Name="PasswordTextBox"
-          Margin="6,12"
-          Width="400"
-          RelativePanel.Below="PasswordTextBlock"/>
+          <PasswordBox 
+            x:Name="PasswordTextBox"
+            Margin="6,12"
+            Width="400"
+            Grid.Column="1"
+            Grid.Row="1"/>
 
-
-        <Button
-          x:Name="StepTwoButton"
-          Content="Enviar"
-          Margin="0,12"
-          RelativePanel.Below="PasswordTextBox"/>
+          <Button
+            x:Name="StepTwoButton"
+            Content="Enviar"
+            Margin="0,12"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"/>
+        </Grid>
 
       </RelativePanel>
     </winui:NavigationView.Content>
