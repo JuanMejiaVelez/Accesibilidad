@@ -1,5 +1,6 @@
 ﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -10,9 +11,10 @@ namespace Teclado
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();          
         }
 
         private void StepOneButton_Click(object sender, RoutedEventArgs e)
@@ -20,8 +22,8 @@ namespace Teclado
             StepOneButton.IsEnabled = false;
             // Process something
 
-            ContainerTwo.Visibility = Visibility.Visible;
             ContainerOne.Visibility = Visibility.Collapsed;
+            ContainerTwo.Visibility = Visibility.Visible;
         }
     }
 }
