@@ -16,7 +16,7 @@
       <winui:NavigationViewItem Icon="Permissions" Content="Seguridad" />
       <winui:NavigationViewItem Icon="Phone" Content="Llamadas" />
       <winui:NavigationViewItem Icon="Video" Content="Video" />
-      <winui:NavigationViewItem Icon="Comment" Content="Cometarios" />
+      <winui:NavigationViewItem Icon="Comment" Content="Comentarios" />
     </winui:NavigationView.MenuItems>
     <winui:NavigationView.Content>
       <RelativePanel Margin="24">
@@ -27,7 +27,7 @@
         </RelativePanel.Transitions>
         <TextBlock 
           x:Name="AppTitle"
-          Text="Aplicacion prueba para navegacion por teclado"
+          Text="Aplicación prueba para navegación por teclado"
           Style="{StaticResource HeaderTextBlockStyle}"
           Margin="0,0,0,24"
           RelativePanel.AlignLeftWithPanel="True"
