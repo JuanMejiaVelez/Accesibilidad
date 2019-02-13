@@ -14,7 +14,7 @@ namespace Teclado
     public sealed partial class MainPage : Page
     {
         #region Stage 2
-        private bool preventLosingFocus = false;
+        //private bool preventLosingFocus = false;
         #endregion
         public MainPage()
         {
