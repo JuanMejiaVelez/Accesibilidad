@@ -134,21 +134,21 @@
             Style="{StaticResource SubtitleTextBlockStyle}"
             Grid.Column="1"/>
 
-          <!--<PasswordBox 
+          <PasswordBox 
             x:Name="PasswordTextBox"
             Margin="6,12"
             Width="400"
             Grid.Column="1"
-            Grid.Row="1"/>-->
+            Grid.Row="1"/>
 
-          <PasswordBox 
+          <!--<PasswordBox 
             x:Name="PasswordTextBox"
             Margin="6,12"
             Width="400"
             Grid.Column="1"
             Grid.Row="1"
             AutomationProperties.Name="Type in your password, keep it secure."
-            AutomationProperties.IsRequiredForForm="True"/>
+            AutomationProperties.IsRequiredForForm="True"/>-->
 
           <Button
             x:Name="StepTwoButton"
