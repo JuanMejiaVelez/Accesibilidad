@@ -10,14 +10,14 @@
 
   <winui:NavigationView>
     <winui:NavigationView.MenuItems>
-      <winui:NavigationViewItem Icon="Home" Content="Home"/>
-      <winui:NavigationViewItem Icon="Calendar" Content="Schedule" />
-      <winui:NavigationViewItem Icon="Camera" Content="Photographs" />
-      <winui:NavigationViewItem Icon="Permissions" Content="Security" />
-      <winui:NavigationViewItem Icon="Phone" Content="Calls" />
-      <winui:NavigationViewItem Icon="Video" Content="Video" />
-      <winui:NavigationViewItem Icon="Comment" Content="Comments" />
-    </winui:NavigationView.MenuItems>
+            <winui:NavigationViewItem Icon="Home" Content="Inicio"/>
+            <winui:NavigationViewItem Icon="Calendar" Content="Agenda" />
+            <winui:NavigationViewItem Icon="Camera" Content="Fotografía" />
+            <winui:NavigationViewItem Icon="Permissions" Content="Seguridad" />
+            <winui:NavigationViewItem Icon="Phone" Content="Llamadas" />
+            <winui:NavigationViewItem Icon="Video" Content="Video" />
+            <winui:NavigationViewItem Icon="Comment" Content="Comentarios" />
+        </winui:NavigationView.MenuItems>
     <winui:NavigationView.Content>
       <RelativePanel Margin="24">
         <RelativePanel.Transitions>
@@ -171,20 +171,20 @@
           <ListView>
             <!--<ListView 
             AutomationProperties.LabeledBy="{x:Bind ListOfCountriesLabel}">-->
-            <TextBlock Text="England"/>
-            <TextBlock Text="China"/>
-            <TextBlock Text="Spain"/>
-            <TextBlock Text="Greece"/>
-            <TextBlock Text="Portugal"/>
-            <TextBlock Text="Argentina"/>
-            <TextBlock Text="Colombia"/>
-            <TextBlock Text="Mexico"/>
-            <TextBlock Text="Brazil"/>
-            <TextBlock Text="Korea"/>
-            <TextBlock Text="South Africa"/>
-            <TextBlock Text="Congo"/>
-            <TextBlock Text="Australia"/>
-          </ListView>
+                        <TextBlock Text="Australia"/>
+                        <TextBlock Text="Argentina"/>
+                        <TextBlock Text="Brazil"/>
+                        <TextBlock Text="China"/>
+                        <TextBlock Text="Colombia"/>
+                        <TextBlock Text="Congo"/>
+                        <TextBlock Text="England"/>
+                        <TextBlock Text="Greece"/>
+                        <TextBlock Text="Korea"/>
+                        <TextBlock Text="Mexico"/>
+                        <TextBlock Text="Portugal"/>
+                        <TextBlock Text="Spain"/>
+                        <TextBlock Text="South Africa"/>
+                    </ListView>
 
           <!--<Button
             x:Name="NotifyButton"
