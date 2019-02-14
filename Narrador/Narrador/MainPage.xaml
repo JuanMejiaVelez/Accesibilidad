@@ -10,13 +10,13 @@
 
   <winui:NavigationView>
     <winui:NavigationView.MenuItems>
-      <winui:NavigationViewItem Icon="Home" Content="Inicio"/>
-      <winui:NavigationViewItem Icon="Calendar" Content="Agenda" />
-      <winui:NavigationViewItem Icon="Camera" Content="Fotografía" />
-      <winui:NavigationViewItem Icon="Permissions" Content="Seguridad" />
-      <winui:NavigationViewItem Icon="Phone" Content="Llamadas" />
+      <winui:NavigationViewItem Icon="Home" Content="Home"/>
+      <winui:NavigationViewItem Icon="Calendar" Content="Schedule" />
+      <winui:NavigationViewItem Icon="Camera" Content="Photographs" />
+      <winui:NavigationViewItem Icon="Permissions" Content="Security" />
+      <winui:NavigationViewItem Icon="Phone" Content="Calls" />
       <winui:NavigationViewItem Icon="Video" Content="Video" />
-      <winui:NavigationViewItem Icon="Comment" Content="Comentarios" />
+      <winui:NavigationViewItem Icon="Comment" Content="Comments" />
     </winui:NavigationView.MenuItems>
     <winui:NavigationView.Content>
       <RelativePanel Margin="24">
