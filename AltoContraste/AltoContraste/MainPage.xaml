@@ -10,13 +10,13 @@
 
   <winui:NavigationView>
     <winui:NavigationView.MenuItems>
-      <winui:NavigationViewItem Icon="Home" Content="Home"/>
-      <winui:NavigationViewItem Icon="Calendar" Content="Schedule" />
-      <winui:NavigationViewItem Icon="Camera" Content="Photographs" />
-      <winui:NavigationViewItem Icon="Permissions" Content="Security" />
-      <winui:NavigationViewItem Icon="Phone" Content="Calls" />
-      <winui:NavigationViewItem Icon="Video" Content="Video" />
-      <winui:NavigationViewItem Icon="Comment" Content="Comments" />
+        <winui:NavigationViewItem Icon="Home" Content="Inicio"/>
+        <winui:NavigationViewItem Icon="Calendar" Content="Agenda" />
+        <winui:NavigationViewItem Icon="Camera" Content="Fotografía" />
+        <winui:NavigationViewItem Icon="Permissions" Content="Seguridad" />
+        <winui:NavigationViewItem Icon="Phone" Content="Llamadas" />
+        <winui:NavigationViewItem Icon="Video" Content="Video" />
+        <winui:NavigationViewItem Icon="Comment" Content="Comentarios" />
     </winui:NavigationView.MenuItems>
     <winui:NavigationView.Content>
       <RelativePanel Margin="24">
@@ -27,7 +27,7 @@
         </RelativePanel.Transitions>
         <TextBlock 
           x:Name="AppTitle"
-          Text="Aplicacion Demo de Texto en Pantalla"
+          Text="Aplicación Demo de Alto Contraste"
           Style="{StaticResource HeaderTextBlockStyle}"
           Margin="0,0,0,24"
           RelativePanel.AlignLeftWithPanel="True"
@@ -111,7 +111,7 @@
 
           <TextBlock 
             x:Name="EmailTextBlock"
-            Text="Corro Electrónico"
+            Text="Correo Electrónico"
             Margin="0,12"
             Style="{StaticResource SubtitleTextBlockStyle}" />
 
@@ -120,7 +120,7 @@
             Margin="6,12"
             Width="400"
             Grid.Row="1"
-            AutomationProperties.Name="E-Mail Address"
+            AutomationProperties.Name="Correo Electrónico"
             AutomationProperties.IsRequiredForForm="True"/>
 
           <TextBlock 
@@ -164,25 +164,24 @@
 
           <TextBlock 
             x:Name="ListOfCountriesLabel"
-            Text="Lista de Paises"/>
+            Text="Lista de Países"/>
 
           <ListView 
             AutomationProperties.LabeledBy="{x:Bind ListOfCountriesLabel}">
-            <TextBlock Text="Inglaterra"/>
+            <TextBlock Text="Africa del Sur"/>
+            <TextBlock Text="Argentina"/>
+            <TextBlock Text="Australia"/>
+            <TextBlock Text="Brasil"/>
             <TextBlock Text="China"/>
+            <TextBlock Text="Colombia"/>
+            <TextBlock Text="Congo"/>
+            <TextBlock Text="Corea"/>
             <TextBlock Text="España"/>
             <TextBlock Text="Grecia"/>
+            <TextBlock Text="Inglaterra"/>
             <TextBlock Text="Portugal"/>
-            <TextBlock Text="Argentina"/>
-            <TextBlock Text="Colombia"/>
             <TextBlock Text="México"/>
-            <TextBlock Text="Brasil"/>
-            <TextBlock Text="Corea"/>
-            <TextBlock Text="Africa del Sur"/>
-            <TextBlock Text="Congo"/>
-            <TextBlock Text="Australia"/>
           </ListView>
-
         </StackPanel>
 
       </RelativePanel>

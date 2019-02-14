@@ -171,19 +171,19 @@
           <ListView>
             <!--<ListView 
             AutomationProperties.LabeledBy="{x:Bind ListOfCountriesLabel}">-->
-            <TextBlock Text="England"/>
-            <TextBlock Text="China"/>
-            <TextBlock Text="Spain"/>
-            <TextBlock Text="Greece"/>
-            <TextBlock Text="Portugal"/>
-            <TextBlock Text="Argentina"/>
-            <TextBlock Text="Colombia"/>
-            <TextBlock Text="Mexico"/>
-            <TextBlock Text="Brazil"/>
-            <TextBlock Text="Korea"/>
-            <TextBlock Text="South Africa"/>
-            <TextBlock Text="Congo"/>
             <TextBlock Text="Australia"/>
+            <TextBlock Text="Argentina"/>
+            <TextBlock Text="Brazil"/>
+            <TextBlock Text="China"/>
+            <TextBlock Text="Colombia"/>
+            <TextBlock Text="Congo"/>
+            <TextBlock Text="England"/>
+            <TextBlock Text="Greece"/>
+            <TextBlock Text="Korea"/>
+            <TextBlock Text="Mexico"/>
+            <TextBlock Text="Portugal"/>
+            <TextBlock Text="Spain"/>
+            <TextBlock Text="South Africa"/>
           </ListView>
 
           <!--<Button
