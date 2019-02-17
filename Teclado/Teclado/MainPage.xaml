@@ -84,7 +84,9 @@
         <Grid 
           x:Name="ContainerTwo"
           Visibility="Collapsed"
-          RelativePanel.Below="ContainerOne">
+          RelativePanel.Below="ContainerOne"
+          RelativePanel.AlignLeftWithPanel="True"
+          RelativePanel.AlignRightWithPanel="True">
           <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -98,13 +100,11 @@
           <TextBlock 
             x:Name="EmailTextBlock"
             Text="Correo Electrónico"
-            Margin="0,12"
             Style="{StaticResource SubtitleTextBlockStyle}" />
 
           <TextBox 
             x:Name="EmailTextBox"
-            Margin="6,12"
-            Width="400"
+            Margin="6,6,12,6"
             Grid.Row="1"/>
 
           <TextBlock 
@@ -115,8 +115,7 @@
 
           <PasswordBox 
             x:Name="PasswordTextBox"
-            Margin="6,12"
-            Width="400"
+            Margin="6,6,12,6"
             Grid.Column="1"
             Grid.Row="1"/>
 
