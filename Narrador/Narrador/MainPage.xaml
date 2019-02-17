@@ -19,180 +19,180 @@
       <winui:NavigationViewItem Icon="Comment" Content="Comments" />
     </winui:NavigationView.MenuItems>
     <winui:NavigationView.Content>
-      <RelativePanel Margin="24">
-        <RelativePanel.Transitions>
-          <TransitionCollection>
-            <EntranceThemeTransition/>
-          </TransitionCollection>
-        </RelativePanel.Transitions>
-        <TextBlock 
-          x:Name="AppTitle"
-          Text="Narrator Demo App"
-          Style="{StaticResource HeaderTextBlockStyle}"
-          Margin="0,0,0,24"
-          RelativePanel.AlignLeftWithPanel="True"
-          RelativePanel.AlignTopWithPanel="True"/>
-
-        <Grid
-          x:Name="ContainerOne"
-          Margin="0,12"
-          RelativePanel.Below="AppTitle"
-          RelativePanel.AlignLeftWithPanel="True"
-          RelativePanel.AlignRightWithPanel="True">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition/>
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-          </Grid.RowDefinitions>
-
+      <ScrollViewer>
+        <RelativePanel Margin="24">
+          <RelativePanel.Transitions>
+            <TransitionCollection>
+              <EntranceThemeTransition/>
+            </TransitionCollection>
+          </RelativePanel.Transitions>
           <TextBlock 
-            x:Name="FirstNameTextBlock"
-            Text="First Name"
-            Style="{StaticResource SubtitleTextBlockStyle}"/>
+            x:Name="AppTitle"
+            Text="Narrator Demo App"
+            Style="{StaticResource HeaderTextBlockStyle}"
+            Margin="0,0,0,24"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignTopWithPanel="True"/>
 
-          <TextBox 
-            x:Name="FirstNameTextBox"
-            Margin="6,6,12,6"
-            Grid.Row="1"/>
-
-          <!--<TextBox 
-            x:Name="FirstNameTextBox"
-            Margin="6,6,12,6"
-            Grid.Row="1"
-            AutomationProperties.Name="First Name"/>-->
-
-          <TextBlock 
-            x:Name="LastNameTextBlock"
-            Text="Last Name"
-            Style="{StaticResource SubtitleTextBlockStyle}"
-            Grid.Column="1"/>
-
-          <TextBox 
-            x:Name="LastNameTextBox"
-            Margin="6,6,12,6"
-            Grid.Column="1"
-            Grid.Row="1"/>
-
-          <!--<TextBox 
-            x:Name="LastNameTextBox"
-            Margin="6,6,12,6"
-            Grid.Column="1"
-            Grid.Row="1"
-            AutomationProperties.LabeledBy="{x:Bind LastNameTextBlock}"/>-->
-
-          <Button 
-            x:Name="StepOneButton"
-            Content="Next"
+          <Grid
+            x:Name="ContainerOne"
             Margin="0,12"
-            Click="StepOneButton_Click"
-            Grid.Row="2"
-            Grid.ColumnSpan="2"/>
+            RelativePanel.Below="AppTitle"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignRightWithPanel="True">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition />
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition />
+              <RowDefinition />
+              <RowDefinition />
+            </Grid.RowDefinitions>
 
-        </Grid>
+            <TextBlock 
+              x:Name="FirstNameTextBlock"
+              Text="First Name"
+              Style="{StaticResource SubtitleTextBlockStyle}"/>
 
-        <Grid 
-          x:Name="ContainerTwo"
-          Visibility="Collapsed"
-          RelativePanel.Below="ContainerOne">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-          </Grid.RowDefinitions>
+            <TextBox 
+              x:Name="FirstNameTextBox"
+              Margin="6,6,12,6"
+              Grid.Row="1"/>
 
-          <TextBlock 
-            x:Name="EmailTextBlock"
-            Text="E-Mail"
-            Margin="0,12"
-            Style="{StaticResource SubtitleTextBlockStyle}" />
+            <!--<TextBox 
+              x:Name="FirstNameTextBox"
+              Margin="6,6,12,6"
+              Grid.Row="1"
+              AutomationProperties.Name="First Name"/>-->
 
-          <TextBox 
-            x:Name="EmailTextBox"
-            Margin="6,12"
-            Width="400"
-            Grid.Row="1"/>
+            <TextBlock 
+              x:Name="LastNameTextBlock"
+              Text="Last Name"
+              Style="{StaticResource SubtitleTextBlockStyle}"
+              Grid.Column="1"/>
 
-          <!--<TextBox 
-            x:Name="EmailTextBox"
-            Margin="6,12"
-            Width="400"
-            Grid.Row="1"
-            AutomationProperties.Name="E-Mail Address"
-            AutomationProperties.IsRequiredForForm="True"/>-->
+            <TextBox 
+              x:Name="LastNameTextBox"
+              Margin="6,6,12,6"
+              Grid.Column="1"
+              Grid.Row="1"/>
 
-          <TextBlock 
-            x:Name="PasswordTextBlock"
-            Text="Password"
-            Style="{StaticResource SubtitleTextBlockStyle}"
-            Grid.Column="1"/>
+            <!--<TextBox 
+              x:Name="LastNameTextBox"
+              Margin="6,6,12,6"
+              Grid.Column="1"
+              Grid.Row="1"
+              AutomationProperties.LabeledBy="{x:Bind LastNameTextBlock}"/>-->
 
-          <PasswordBox 
-            x:Name="PasswordTextBox"
-            Margin="6,12"
-            Width="400"
-            Grid.Column="1"
-            Grid.Row="1"/>
+            <Button 
+              x:Name="StepOneButton"
+              Content="Next"
+              Margin="0,12"
+              Click="StepOneButton_Click"
+              Grid.Row="2"
+              Grid.ColumnSpan="2"/>
 
-          <!--<PasswordBox 
-            x:Name="PasswordTextBox"
-            Margin="6,12"
-            Width="400"
-            Grid.Column="1"
-            Grid.Row="1"
-            AutomationProperties.Name="Type in your password, keep it secure."
-            AutomationProperties.IsRequiredForForm="True"/>-->
+          </Grid>
 
-          <Button
-            x:Name="StepTwoButton"
-            Content="Send"
-            Click="StepTwoButton_Click"
-            Margin="0,12"
-            Grid.Row="2"            
-            Grid.ColumnSpan="2"/>
-        </Grid>
+          <Grid 
+            x:Name="ContainerTwo"
+            Visibility="Collapsed"
+            RelativePanel.Below="ContainerOne"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignRightWithPanel="True">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition/>
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition/>
+              <RowDefinition/>
+              <RowDefinition/>
+            </Grid.RowDefinitions>
 
-        <StackPanel
-          x:Name="ContainerThree"
-          Visibility="Collapsed"
-          RelativePanel.Below="ContainerTwo">
+            <TextBlock 
+              x:Name="EmailTextBlock"
+              Text="E-Mail"
+              Style="{StaticResource SubtitleTextBlockStyle}" />
 
-          <TextBlock 
-            x:Name="ListOfCountriesLabel"
-            Text="List of Countries"/>
+            <TextBox 
+              x:Name="EmailTextBox"
+              Margin="6,6,12,6"
+              Grid.Row="1"/>
 
-          <ListView>
-            <!--<ListView
-            AutomationProperties.LabeledBy="{x:Bind ListOfCountriesLabel}">-->
-            <TextBlock Text="Australia"/>
-            <TextBlock Text="Argentina"/>
-            <TextBlock Text="Brazil"/>
-            <TextBlock Text="China"/>
-            <TextBlock Text="Colombia"/>
-            <TextBlock Text="Congo"/>
-            <TextBlock Text="England"/>
-            <TextBlock Text="Greece"/>
-            <TextBlock Text="Korea"/>
-            <TextBlock Text="Mexico"/>
-            <TextBlock Text="Portugal"/>
-            <TextBlock Text="Spain"/>
-            <TextBlock Text="South Africa"/>
-          </ListView>
+            <!--<TextBox 
+              x:Name="EmailTextBox"
+              Margin="6,6,12,6"
+              Grid.Row="1"
+              AutomationProperties.Name="E-Mail Address"
+              AutomationProperties.IsRequiredForForm="True"/>-->
 
-          <!--<Button
-            x:Name="NotifyButton"
-            Content="Raise notification"
-            Click="NotifyButton_Click" />-->
-        </StackPanel>
+            <TextBlock 
+              x:Name="PasswordTextBlock"
+              Text="Password"
+              Style="{StaticResource SubtitleTextBlockStyle}"
+              Grid.Column="1"/>
 
-      </RelativePanel>
+            <PasswordBox 
+              x:Name="PasswordTextBox"
+              Margin="6,6,12,6"
+              Grid.Column="1"
+              Grid.Row="1"/>
+
+            <!--<PasswordBox 
+              x:Name="PasswordTextBox"
+              Margin="6,6,12,6"
+              Grid.Column="1"
+              Grid.Row="1"
+              AutomationProperties.Name="Type in your password, keep it secure."
+              AutomationProperties.IsRequiredForForm="True"/>-->
+
+            <Button
+              x:Name="StepTwoButton"
+              Content="Send"
+              Click="StepTwoButton_Click"
+              Margin="0,12"
+              Grid.Row="2"            
+              Grid.ColumnSpan="2"/>
+          </Grid>
+
+          <StackPanel
+            x:Name="ContainerThree"
+            Visibility="Collapsed"
+            Margin="0,0,0,24"
+            RelativePanel.Below="ContainerTwo">
+
+            <TextBlock 
+              x:Name="ListOfCountriesLabel"
+              Text="List of Countries"/>
+
+            <ListView>
+              <!--<ListView
+              AutomationProperties.LabeledBy="{x:Bind ListOfCountriesLabel}">-->
+              <TextBlock Text="Australia"/>
+              <TextBlock Text="Argentina"/>
+              <TextBlock Text="Brazil"/>
+              <TextBlock Text="China"/>
+              <TextBlock Text="Colombia"/>
+              <TextBlock Text="Congo"/>
+              <TextBlock Text="England"/>
+              <TextBlock Text="Greece"/>
+              <TextBlock Text="Korea"/>
+              <TextBlock Text="Mexico"/>
+              <TextBlock Text="Portugal"/>
+              <TextBlock Text="Spain"/>
+              <TextBlock Text="South Africa"/>
+            </ListView>
+
+            <!--<Button
+              x:Name="NotifyButton"
+              Content="Raise notification"
+              Click="NotifyButton_Click" />-->
+          </StackPanel>
+
+        </RelativePanel>
+      </ScrollViewer>
     </winui:NavigationView.Content>
   </winui:NavigationView>
 </Page>
