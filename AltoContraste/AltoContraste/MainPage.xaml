@@ -75,7 +75,6 @@
             Grid.Row="1"
             AutomationProperties.LabeledBy="{x:Bind LastNameTextBlock}"/>
 
-
           <Button 
             x:Name="StepOneButton"
             Content="Siguente"
@@ -143,7 +142,7 @@
             Content="Enviar"
             Click="StepTwoButton_Click"
             Margin="0,12"
-            Grid.Row="2"            
+            Grid.Row="2"
             Grid.ColumnSpan="2"/>
 
           <!--<Button
@@ -152,7 +151,7 @@
             Background="{ThemeResource MyButttonBrush}"
             Click="StepTwoButton_Click"
             Margin="0,12"
-            Grid.Row="2"            
+            Grid.Row="2"
             Grid.ColumnSpan="2"/>-->
 
         </Grid>
