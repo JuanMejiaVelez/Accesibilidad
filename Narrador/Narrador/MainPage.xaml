@@ -169,7 +169,7 @@
             Text="List of Countries"/>
 
           <ListView>
-            <!--<ListView 
+            <!--<ListView
             AutomationProperties.LabeledBy="{x:Bind ListOfCountriesLabel}">-->
             <TextBlock Text="Australia"/>
             <TextBlock Text="Argentina"/>
