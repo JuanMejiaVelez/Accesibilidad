@@ -1,0 +1,155 @@
+﻿<Page
+    x:Class="Demo2NarradorInicial.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+  <winui:NavigationView>
+    <winui:NavigationView.MenuItems>
+      <winui:NavigationViewItem Icon="Home"
+                                Content="Home"/>
+      <winui:NavigationViewItem Icon="Calendar"
+                                Content="Schedule" />
+      <winui:NavigationViewItem Icon="Camera"
+                                Content="Photographs" />
+      <winui:NavigationViewItem Icon="Permissions"
+                                Content="Security" />
+      <winui:NavigationViewItem Icon="Phone"
+                                Content="Calls" />
+      <winui:NavigationViewItem Icon="Video"
+                                Content="Video" />
+      <winui:NavigationViewItem Icon="Comment"
+                                Content="Comments" />
+    </winui:NavigationView.MenuItems>
+    <winui:NavigationView.Content>
+      <ScrollViewer>
+        <RelativePanel Margin="24">
+          <RelativePanel.Transitions>
+            <TransitionCollection>
+              <EntranceThemeTransition/>
+            </TransitionCollection>
+          </RelativePanel.Transitions>
+          <TextBlock x:Name="AppTitle"
+                     Text="Demo 2 : Narrator"
+                     Style="{StaticResource HeaderTextBlockStyle}"
+                     Margin="0,0,0,24"
+                     RelativePanel.AlignLeftWithPanel="True"
+                     RelativePanel.AlignTopWithPanel="True"/>
+
+          <Grid x:Name="ContainerOne"
+                Margin="0,12"
+                RelativePanel.Below="AppTitle"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition />
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition />
+              <RowDefinition />
+              <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="FirstNameTextBlock"
+                       Text="First Name"
+                       Style="{StaticResource SubtitleTextBlockStyle}"/>
+
+            <TextBox x:Name="FirstNameTextBox"
+                     Margin="6,6,12,6"
+                     Grid.Row="1"/>
+
+            <TextBlock x:Name="LastNameTextBlock"
+                       Text="Last Name"
+                       Style="{StaticResource SubtitleTextBlockStyle}"
+                       Grid.Column="1"/>
+
+            <TextBox x:Name="LastNameTextBox"
+                     Margin="6,6,12,6"
+                     Grid.Column="1"
+                     Grid.Row="1"/>
+
+            <Button x:Name="StepOneButton"
+                    Content="Next"
+                    Margin="0,12"
+                    Click="StepOneButton_Click"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"/>
+          </Grid>
+
+          <Grid x:Name="ContainerTwo"
+                Visibility="Collapsed"
+                RelativePanel.Below="ContainerOne"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition/>
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition/>
+              <RowDefinition/>
+              <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="EmailTextBlock"
+                       Text="E-Mail"
+                       Style="{StaticResource SubtitleTextBlockStyle}" />
+
+            <TextBox x:Name="EmailTextBox"
+                     Margin="6,6,12,6"
+                     Grid.Row="1"/>
+
+            <TextBlock x:Name="PasswordTextBlock"
+                       Text="Password"
+                       Style="{StaticResource SubtitleTextBlockStyle}"
+                       Grid.Column="1"/>
+
+            <PasswordBox x:Name="PasswordTextBox"
+                         Margin="6,6,12,6"
+                         Grid.Column="1"
+                         Grid.Row="1"/>
+
+            <Button x:Name="StepTwoButton"
+                    Content="Send"
+                    Click="StepTwoButton_Click"
+                    Margin="0,12"
+                    Grid.Row="2"            
+                    Grid.ColumnSpan="2"/>
+          </Grid>
+
+          <StackPanel x:Name="ContainerThree"
+                      Visibility="Collapsed"
+                      Margin="0,0,0,24"
+                      RelativePanel.Below="ContainerTwo">
+
+            <TextBlock x:Name="ListOfCountriesLabel"
+                       Text="List of Countries"/>
+
+            <ListView>
+              <TextBlock Text="Australia"/>
+              <TextBlock Text="Argentina"/>
+              <TextBlock Text="Brazil"/>
+              <TextBlock Text="China"/>
+              <TextBlock Text="Colombia"/>
+              <TextBlock Text="Congo"/>
+              <TextBlock Text="England"/>
+              <TextBlock Text="Greece"/>
+              <TextBlock Text="Korea"/>
+              <TextBlock Text="Mexico"/>
+              <TextBlock Text="Portugal"/>
+              <TextBlock Text="Spain"/>
+              <TextBlock Text="South Africa"/>
+            </ListView>
+
+          </StackPanel>
+
+        </RelativePanel>
+      </ScrollViewer>
+    </winui:NavigationView.Content>
+  </winui:NavigationView>
+</Page>

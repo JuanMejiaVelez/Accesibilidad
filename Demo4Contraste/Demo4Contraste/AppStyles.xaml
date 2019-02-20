@@ -1,0 +1,21 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Demo4Contraste">
+  <ResourceDictionary.ThemeDictionaries>
+    
+    <ResourceDictionary x:Key="Light">
+      <SolidColorBrush x:Key="MyButttonBrush" Color="ForestGreen"/>
+    </ResourceDictionary>
+
+    <ResourceDictionary x:Key="Dark">
+      <SolidColorBrush x:Key="MyButttonBrush" Color="CornflowerBlue"/>
+    </ResourceDictionary>
+    
+    <!--https://docs.microsoft.com/en-us/windows/uwp/design/accessibility/high-contrast-themes-->
+    <ResourceDictionary x:Key="HighContrast">
+      <SolidColorBrush x:Key="MyButttonBrush" Color="{ThemeResource SystemColorButtonFaceColor}"/>
+    </ResourceDictionary>
+    
+  </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>
